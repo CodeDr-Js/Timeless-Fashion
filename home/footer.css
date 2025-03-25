@@ -13,6 +13,8 @@ footer {
     background-color: #0c0c0c;
     color: #fff;
     padding: 2rem 1.5rem;
+    position: sticky;
+  
   }
 
   .footer-container {

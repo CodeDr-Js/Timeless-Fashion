@@ -13,6 +13,22 @@
       font-family: Arial, sans-serif;
     } */
 
+    /* nav {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;  
+      top: 0;           
+      left: 0;          
+      width: 100%;      
+      z-index: 10;
+      margin-bottom: 20px; 
+    } */
+
+    
     nav {
       background-color: #0a0a0a;
       color: #fff;
@@ -22,7 +38,7 @@
       align-items: center;
       position: relative;
       z-index: 10;
-      margin-bottom: 20px;
+      /* margin-bottom: 20px; */
     }
 
     .logo {
@@ -87,7 +103,7 @@
 
 
     /* Marquee */
-.marquee {
+/* .marquee {
   white-space: nowrap;
   overflow: hidden;
   display: block;
@@ -95,10 +111,41 @@
   background-color: black;
   color: white;
   padding: 10px;
-  font-size: 18px;
+  font-size: clamp(0.7rem, 2vw, 1.5rem);
   animation: marquee 10s linear infinite;
   margin-bottom: 20px;
   text-align: center;
+  box-sizing: border-box;
+  
+} */
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  /* background-color: black; */
+  /* color: rgb(188, 207, 11); */
+  padding: 10px;
+  font-size: clamp(0.7rem, 2vw, 1.5rem);
+  /* margin-bottom: 20px; */
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: rgb(151, 209, 149);
+  /* text-transform: uppercase; */
+  text-shadow: 
+      1px 1px 0px #167533, 
+      1px 2px 0px #067a4a, 
+      0px 0px 0px #1e9124, 
+      4px 4px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-right: 20%; 
+  /* Gives it space to enter from the right */
+  animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
