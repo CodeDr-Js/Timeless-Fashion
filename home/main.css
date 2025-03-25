@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    font-family: "Bitter", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+
+
+  .vip-text {
+   
+    font-weight: bold;
+    color:rgb(10, 10, 10);
+    text-transform: uppercase;
+    text-shadow: 
+        1px 1px 0px #0b2bb8, 
+        1px 2px 0px #0658a5, 
+        0px 0px 0px #214bd6, 
+        4px 4px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+
+  .vip-text-2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(151, 209, 149);
+    text-transform: uppercase;
+    text-shadow: 
+        1px 1px 0px #167533, 
+        1px 2px 0px #067a4a, 
+        0px 0px 0px #1e9124, 
+        4px 4px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+
+/* Slideshow container */
+/* .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+} */
+
+
+
+/* Caption text */
+
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  /* height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; */
+}
+
+.mySlides {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 0.5 darkness */
+  z-index: 1;
+}
+
+.image-div {
+  position: relative;
+}
+
+.timeless-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Perfect center */
+  z-index: 3;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 90%;  /* Makes it responsive */
+}
+
+.timeless-div h1 {
+  font-weight: bold;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  /* font-size: 2.5rem;   */
+  /* Adjust size for large screens */
+}
+
+.timeless-div p {
+  font-size: clamp(0.7rem, 2vw, 1.5rem);
+  /* font-size: 1.2rem; */
+  margin-bottom: 20px;
+}
+
+.timeless-div button {
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  background-color: #ffffff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.timeless-div button:hover {
+  background-color: #ddd;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+

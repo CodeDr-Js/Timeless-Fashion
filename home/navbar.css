@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    font-family: "Bitter", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+
+    /* body {
+      font-family: Arial, sans-serif;
+    } */
+
+    nav {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff6347;
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 2rem;
+      user-select: none;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem;
+        display: none;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #444;
+      }
+
+      .nav-links a:last-child {
+        border-bottom: none;
+      }
+    }
+
+
+
+    /* Marquee */
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  animation: marquee 10s linear infinite;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}

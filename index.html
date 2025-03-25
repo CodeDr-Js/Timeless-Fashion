@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion House</title>
+    <link rel="stylesheet" href="./home/main.css">
+    <link rel="stylesheet" href="./home/navbar.css">
+    <link rel="stylesheet" href="./home/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+</head>
+<body>
+    <nav>
+      <div class="logo">Timeless</div>
+  
+      <div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Hamburger Icon -->
+  
+      <div class="nav-links" id="nav-links">
+        <a href="./about/about.html">About</a>
+        <a href="./collection/index.html">Services</a>
+        <a href="./contact us/index.html">Contact</a>
+        <a href="./Board of Trustees/index.html">Team</a>
+      </div>
+    </nav>
+
+    <div class="marquee">
+      🚀 Welcome to our Fashion House! Check out our latest collections and upcoming events! 🎉
+    </div>
+
+    <div class="image-card" >
+      
+
+      <div class="image-div">
+        <div class="timeless-div">
+          <h1>TIMELESS COLLECTION 2025</h1>
+          <br/>
+          <p>Discover the Africa essence of luxury</p>
+          <br/>
+          <button onclick="navigateToPage()">Shop Now</button>
+        </div>
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade" >
+            
+            <div class="overlay"></div>
+            <img src="./home/homeImage/p1.jpg" style="width:100%; height: auto; " >
+            
+          </div>
+          
+          <div class="mySlides fade">
+          
+            <div class="overlay"></div>
+            <img src="./home/homeImage/p4.jpg" style="width:100%; height: auto; max-width: 3000px; ">
+            
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="overlay"></div>
+            <img src="./home/homeImage/p3.jpg" style="width:100%; height: auto; ">
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="footer-container">
+  
+        <div class="footer-section">
+          <div class="footer-logo">Timeless</div>
+          <p>Discover the Africa essence of luxury</p>
+        </div>
+  
+        <div class="footer-section footer-links" style="margin-left: 30px;">
+          <h4 style="font-style: italic; margin-bottom: 10px;">Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="./about/about.html">About</a>
+          <a href="./collection/index.html">Services</a>
+          <a href="./contact us/index.html">Contact</a>
+          <a href="./Board of Trustees/index.html">Team</a>
+        </div>
+  
+        <div class="footer-section">
+          <h3>Connect with Us</h3>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="footer-bottom">
+        &copy; 2025 Timeless Fashion. All rights reserved.
+      </div>
+    </footer>
+
+  
+
+
+    <script>
+       const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+
+      // Toggle icon between hamburger and close (X)
+      if (navLinks.classList.contains('show')) {
+        menuIcon.innerHTML = '&#10006;'; // ✖
+      } else {
+        menuIcon.innerHTML = '&#9776;'; // ☰
+      }
+    });
+        
+
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+function navigateToPage() {
+            // This will navigate to the specified URL
+            window.location.href = "./collection/index.html"; // Replace with your target URL
+        }
+        </script>
+</body>
+</html>

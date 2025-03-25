@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    font-family: "Bitter", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+
+footer {
+    background-color: #0c0c0c;
+    color: #fff;
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-container {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    /* flex: 1; */
+    min-width: 220px;
+  }
+
+  .footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.7rem;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: #ff6347;
+  }
+
+  .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #ff6347;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .social-icons a {
+      margin: 0 0.5rem;
+    }
+}

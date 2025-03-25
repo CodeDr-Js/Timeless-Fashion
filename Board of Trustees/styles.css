@@ -1,0 +1,56 @@
+body{
+    font-family: 'Bitter', serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    column-gap: 16px;
+    margin-bottom: 20px;
+}
+
+.trustee{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.trustee > img{
+    border: 1.5px solid black ;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px; 
+}
+
+.trustee > span{
+    font-size: 18px;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 768px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* My Phone: */
+@media screen and (max-width: 710px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trustee > span{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .trustee > img {
+        width: 100px;
+        height: 100px;
+    }
+}

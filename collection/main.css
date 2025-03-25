@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Bitter", serif;
+  box-sizing: border-box;
+}
+
+.collection-div {
+  line-height: 1.5;
+  margin: 3rem;
+  padding: 0;
+}
+
+.collection-div h1 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.row {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.column {
+  flex: 33.33%;
+}
+
+.row img {
+  width: 100%;
+  height: 80%;
+  /* object-fit: contain */
+}
+
+@media (max-width: 480px) {
+  .row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    gap: 0;
+    width: 100%;
+  }
+
+  .column {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    visibility: visible !important; /* Ensure all are visible in the flow */
+    position: relative;
+    opacity: 1;
+  }
+
+  .prev,
+  .next {
+    display: none; /* Hide arrows on mobile */
+  }
+
+  .hidden {
+    /* visibility: hidden;
+    opacity: 0;
+    position: absolute; */
+    display: block !important;
+  }
+}
+
+.caption {
+  font-size: 15.4px;
+  line-height: 1.7rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+.price {
+  font-size: 13px;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 57%;
+  width: 1rem;
+  height: 1.3rem;
+  margin-top: -22px;
+  margin-right: 1.5rem;
+  padding: 16px;
+  color: rgb(46, 45, 45);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  transform: translateY(-50%);
+}
+
+.prev {
+  margin-left: -1.3rem;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(224, 224, 224, 1);
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.6s ease-in-out forwards;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.6s ease-in-out forwards;
+}
+
+/* Slide Out Animation */
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-out {
+  animation: slide-out 0.6s ease-in-out forwards;
+}
